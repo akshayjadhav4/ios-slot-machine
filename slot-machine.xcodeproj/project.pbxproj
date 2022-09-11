@@ -13,6 +13,8 @@
 		DBE6699628CDE07500615E51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE6698428CDE06F00615E51 /* ContentView.swift */; };
 		DBE6699728CDE07500615E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE6698528CDE07500615E51 /* Assets.xcassets */; };
 		DBE6699828CDE07500615E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE6698528CDE07500615E51 /* Assets.xcassets */; };
+		DBE669A228CDE14B00615E51 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE669A128CDE14B00615E51 /* SwiftUIView.swift */; };
+		DBE669A328CDE14B00615E51 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE669A128CDE14B00615E51 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,7 @@
 		DBE6698A28CDE07500615E51 /* slot-machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "slot-machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE6699028CDE07500615E51 /* slot-machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "slot-machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE6699228CDE07500615E51 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		DBE669A128CDE14B00615E51 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 				DBE6698328CDE06F00615E51 /* slot_machineApp.swift */,
 				DBE6698428CDE06F00615E51 /* ContentView.swift */,
 				DBE6698528CDE07500615E51 /* Assets.xcassets */,
+				DBE669A128CDE14B00615E51 /* SwiftUIView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -178,6 +182,7 @@
 			files = (
 				DBE6699528CDE07500615E51 /* ContentView.swift in Sources */,
 				DBE6699328CDE07500615E51 /* slot_machineApp.swift in Sources */,
+				DBE669A228CDE14B00615E51 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +192,7 @@
 			files = (
 				DBE6699628CDE07500615E51 /* ContentView.swift in Sources */,
 				DBE6699428CDE07500615E51 /* slot_machineApp.swift in Sources */,
+				DBE669A328CDE14B00615E51 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
