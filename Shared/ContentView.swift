@@ -55,32 +55,45 @@ struct ContentView: View {
                         Hexagon()
                             .fill(Color.white.opacity(0.8))
                             .frame(width: 100, height: 120, alignment: .center).overlay(
-                                Image(symbols[0]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
+                                Image(symbols[numbers[0]]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
                             )
                         Hexagon()
                             .fill(Color.white.opacity(0.8))
                             .frame(width: 100, height: 120, alignment: .center).overlay(
-                                Image(symbols[0]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
+                                Image(symbols[numbers[1]]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
                             )
                     }
                     Hexagon()
                         .fill(Color.white.opacity(0.8))
                         .frame(width: 100, height: 120, alignment: .center).overlay(
-                            Image(symbols[0]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
+                            Image(symbols[numbers[2]]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
                         )
                     HStack(spacing: 35){
                         Hexagon()
                             .fill(Color.white.opacity(0.8))
                             .frame(width: 100, height: 120, alignment: .center).overlay(
-                                Image(symbols[0]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
+                                Image(symbols[numbers[0]]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
                             )
                         Hexagon()
                             .fill(Color.white.opacity(0.8))
                             .frame(width: 100, height: 120, alignment: .center).overlay(
-                                Image(symbols[0]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
+                                Image(symbols[numbers[2]]).resizable().scaledToFit().frame(width: 80, height: 70, alignment: .center).shadow(color: .gray, radius: 4, x: 4, y: 5)
                             )
                     }
                 }
+                Button {
+                    print("Pressed")
+                } label: {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color("Color"))
+                        .overlay(
+                            Text("Spin").font(.title3).fontWeight(.black)
+                        )
+                        .foregroundColor(.black)
+                        .frame(width: 200, height: 40, alignment: .center)
+                        .shadow(color: .gray, radius: 1, y: 4)
+                }
+
             }
         }
     }
