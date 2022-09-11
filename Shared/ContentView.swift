@@ -40,7 +40,7 @@ struct ContentView: View {
     @State public var numbers = [0,1,2]
     @State public var counter = 0
     @State private var showingAlert: Choice?
-    
+    @State public var attempts = 5
     var body: some View {
         ZStack{
             Image("sunshine").resizable().ignoresSafeArea(.all)
@@ -50,6 +50,7 @@ struct ContentView: View {
                     Text("Slot Machine").font(.system(size:30)).fontWeight(.black).shadow(color: .orange, radius: 2, y: 5)
                     Image("fire").resizable().scaledToFit().shadow(color: .orange, radius: 2, y: 5)
                 }.frame(width: .infinity, height: 50, alignment: .center)
+                Text("\(attempts) Attempts left").font(.title3).fontWeight(.bold)
                 VStack(spacing: 15){
                     HStack(spacing: 35){
                         Hexagon()
@@ -82,7 +83,23 @@ struct ContentView: View {
                     }
                 }
                 Button {
-                    print("Pressed")
+                    self.numbers[0] = Int.random(in: 0...self.symbols.count - 1)
+                    self.numbers[1] = Int.random(in: 0...self.symbols.count - 1)
+                    self.numbers[2] = Int.random(in: 0...self.symbols.count - 1)
+                    
+                    counter+=1
+                    attempts-=1
+                    if self.numbers[0] == self.numbers[1] &&
+                        self.numbers[1] == self.numbers[2] {
+                        self.showingAlert = .success
+                        counter = 0
+                        attempts = 5
+                    }
+                    if counter > 4 {
+                        self.showingAlert = .failure
+                        counter = 0
+                        attempts = 5
+                    }
                 } label: {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color("Color"))
@@ -92,6 +109,14 @@ struct ContentView: View {
                         .foregroundColor(.black)
                         .frame(width: 200, height: 40, alignment: .center)
                         .shadow(color: .gray, radius: 1, y: 4)
+                }
+                .alert(item: $showingAlert) { alert -> Alert in
+                    switch alert {
+                    case .success:
+                        return Alert(title: Text("Congratulations. You Won!!"), message: Text("You are lucky"),dismissButton: .cancel())
+                    case .failure:
+                        return Alert(title: Text("Opps. You Lost!!"), message: Text("Better luck next time"),dismissButton: .cancel())
+                    }
                 }
 
             }
